@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let studentObj1 = {
+            id: 1,
+            name: 'Nikhil',
+            grades: 80,
+        }
+        let studentObj2 = {
+            id: 2,
+            name: 'Rohit',
+            grades: 90,
+        }
+        let studentObj3 = {
+            id: 3,
+            name: 'Danish',
+            grades: 85,
+        }
+
+
+
+        let studentsArr = []
+        // console.log(studentsArr[0]);
+
+        function addStudent(newStudent){
+            studentsArr.push(newStudent);
+        }
+
+        function toDelete(deleteStd){
+            let newId = deleteStd.id;
+            // console.log(newId);
+            for(let i = 0; i < studentsArr.length; i++){
+                if(newId === studentsArr[i].id){
+                    // delete(studentsArr[i]);
+                    studentsArr.splice(i, i)
+                }
+            }
+
+        
+            return studentsArr;
+        }
+        
+        console.log(studentsArr)
+        addStudent(studentObj1);
+        addStudent(studentObj2)
+        addStudent(studentObj3)
+        console.log(studentsArr)
+        toDelete(studentObj3);
+        console.log(studentsArr);
+    </script>
+</body>
+</html>
